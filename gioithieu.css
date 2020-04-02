@@ -1,0 +1,117 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/*chỉnh toàn bộ trang*/
+	#khung{
+		width: 1200px;
+		margin: auto;
+		font-family: Arial;
+	}
+	/*phần header*/
+	
+	/*phần header*/
+	#top{
+			margin: auto;
+			height: 140px;
+			width: 1200px;
+			
+		}
+		#menu{
+		clear: both;
+		height: 40px;
+		margin-top: 5px;
+	}
+	#banner{
+	width: 1200px;
+	height: 400px;
+	background: url(hinhanh/2.jpg);
+	margin-top: 5px;
+	margin-bottom: 25px;
+	clear: both;
+	animation: banner 20s infinite;
+	}
+	@keyframes banner{
+		25%{
+			background: url(hinhanh/2.jpg);
+		}
+		50%{
+			background: url(hinhanh/7.jpg);
+		}
+		75%{
+			background: url(hinhanh/8.jpg);
+		}
+		100%{
+			background: url(hinhanh/9.jpg);
+		}
+	}
+	#tin{height: 500px;
+		width: 1200px;
+		clear: both;
+		margin-top: 20px;
+	}	
+	#footer{
+		min-height: 190px;
+		background-image: url(hinhanh/nengo.jpg);
+		text-align: center;
+		clear: both;
+		font-size: 20px;
+	}
+	#gioithieua{
+		min-height: 100px;
+		float: left;
+		margin-left: 5px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+
+	}
+	.gioithieu1a{
+		width: 1200px;
+		height: 50px;
+		line-height: 50px;
+		text-align: center;
+		border-bottom: 3px solid #ab4205ba;
+	}
+	.gioithieu1a p{
+		padding-left:5px; 
+		background: #ab4205b0;
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: fonta;
+		padding: 0 10px 0 10px;
+		color: white;
+		font-size: 28px;
+		font-weight: bold;
+		margin-bottom: 5px;
+	}
+	#gioithieu2a{
+		margin-top: 15px;
+		padding-left: 5px;
+		width: 100%;
+		float:left;
+		font-size: 18px;
+	}
+	#gioithieu2a p{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	#gioithieu2a p a{
+
+		text-decoration: none;
+		color: red;
+}
+#gotop {
+		display: none;
+		position: fixed;
+		bottom: 50px;
+		right: 15px;
+		z-index: 99;
+		font-size: 18px;
+		border: 3px solid gray ;
+		outline: none;
+		/*background-color: gray;*/
+		color: black;
+		cursor: pointer;
+		padding: 8px;
+		border-radius: 4px;
+	}

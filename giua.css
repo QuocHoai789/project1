@@ -1,0 +1,232 @@
+#menudoc{
+  /*background-color: red;*/
+  width: 200px;
+  min-height:400px;
+  float: left;
+}
+#dau{
+  border: 1px solid black;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  width: 200px;
+  float: left;
+  background-color: #ab4205b0;
+  text-align: center;
+  color: white;
+}
+#doc{width: 200px;
+    border: 1px solid black;
+    min-height:412px;
+    float: left;
+}
+#doc ul {
+  background: url(hinhanh/giay.jpg); 
+  width: 198px;
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+#doc li {
+  height: 41px;
+  line-height: 41px;
+  border-bottom: 1px solid #88757533;
+  padding: 0 1em;
+}
+#doc li a {
+  text-decoration: none;
+  color: #333;font-weight: bold;
+  display: block;
+}
+#doc li:hover {
+   background: #CDE2CD;
+}
+/*giới thiệu công ty*/
+#gioithieu{
+
+  width: 750px;
+  min-height: 400px;
+  float: left;
+  margin-left: 5px;
+}
+.gioithieu1{
+
+  width: 750px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 3px solid #ab4205ba;
+}
+.gioithieu1 p{
+  padding-left:5px; 
+  background: #ab4205b0;
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: fonta;
+  padding: 0 10px 0 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#gioithieu2{
+  margin-top: 15px;
+  width: 750px;
+  min-height: 332px;
+  float:left;
+  font-size: 18px;
+}
+#gioithieu2 a{
+  text-decoration: none;
+  color: red;
+}
+#gioithieu2 p{
+  margin: 0px 20px 5px 20px;
+}
+
+/*danh mục sản phẩm*/
+
+
+/*quảng cáo*/
+#ads{
+  width: 240px;
+  min-height: 400px;
+  margin-left: 5px;
+  float: left;
+}
+/*sản phẩm*/
+#sanpham{   
+    margin-top: 5px;
+    clear: both;
+    min-height: 660px;
+}
+#sanpham a:hover{
+    color: red;
+}
+.sanpham1{
+    clear: both;
+    background-image: url(hinhanh/giay.jpg);
+    height: 40px;
+    color: #925d08;
+    border: 1px solid #bbb;
+    font-weight: bold;
+    font-size: 20px;
+    border-top: 3px solid #925d08;
+    margin-top: 25px;
+}
+.sanpham1 p{
+   padding-left: 5px;
+   padding-top: 5px;
+}
+.sanpham1a{
+  
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-bottom: 3px solid #ab4205ba;
+}
+.sanpham1a p{
+
+    background: #ab4205b0;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: fonta;
+    padding: 0 10px 0 10px;
+}
+.bocsp{
+   height: 280px;
+
+}
+.sanpham2{
+   height: 200px;
+   margin-top: 10px;
+}
+.sp{
+   height: 280px;
+   width: 234px;
+   /*background-color: red;*/
+   float: left;
+   margin-left: 5px;
+   margin-top: 5px;
+}
+.sp .tensp{
+   height: 40px;
+   text-align: center;
+   padding-top: 10px;
+}
+.sp .giasp{
+   height: 20px;
+   color: red;
+   text-align: center;
+   padding-top: 7px;
+}
+
+.sp img{
+  width: 220px;
+  height: 190px;
+  margin-top: 5px;
+  margin-left: 7px;
+}
+.imge{
+    display: block;
+}
+.text-sp-bc {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0.5, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: white; 
+    width: 100%;
+    height: 100%;
+    transition: .8s ease;
+    opacity:0;
+    color: blue;
+    font-size: 20px;
+    padding-top: 140px;
+    text-align: center;
+
+}   
+.text-sp-bc a{
+    color: white;
+    padding: 7px;
+    background-color: green;
+    text-decoration: none;
+    display: inline-block;
+}
+.chua:hover .text-sp-bc{
+
+    text-decoration: none;
+    color: white;
+    opacity: 2;
+
+}
+.chua :hover .text-sp-bc a{
+    background-color: #21a250;
+}
+.hinh{
+    float: left;
+    margin-left: 5px;
+    width: 234px;
+    height: 200px;
+    text-align: center;
+}
+.sanpham3{
+   clear: both;
+   height:50px;
+   margin-top: 10px;
+}
+.sanpham3a{
+   background: #e8e1c1;
+   height: 50px;
+   width: 234px;
+   float: left;
+   margin-left: 5px;
+}
+.sanpham3a p{ 
+   text-align: center;
+   color: gray;
+   font-weight: bold;
+
+}
+.sanpham3a a{text-decoration: none}

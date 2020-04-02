@@ -1,0 +1,13 @@
+#thongtin{
+		padding-top: 10px;
+		height: 160px;
+		line-height: 33px;
+			
+	}
+
+	#footer #chan {
+		height: 40px;
+		line-height: 40px;
+		background: gray;
+		clear: both;
+	}	

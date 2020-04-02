@@ -1,0 +1,46 @@
+#khung{
+	width: 1200px;
+	margin: auto;
+	font-family: Arial;
+}
+#menu{
+	clear: both;
+	height: 40px;
+	margin-top: 5px;
+}
+#menu1{
+		height: 40px;
+		width: 1200px;
+		background-color: gray;
+		float: left
+	}
+	#menu1 ul
+	{ list-style-type: none;
+		text-align: center;
+	}
+	#menu1 li{
+		font-weight: bold;
+		width: 150px;
+		height: 40px;
+		position: relative;
+		line-height: 40px;
+		float: left;
+	}
+	#menu1 a{
+		text-decoration: none;
+		color: white;
+		display: block;
+		clear: both;
+	}
+	#menu1 a:hover{
+		background:#f1f1f1;
+		color: #333; 
+	}
+	#menu1 .sub-menu{
+		background-color: gray;
+		display: none;
+		position: absolute;
+	}
+	#menu1 li:hover .sub-menu{
+		display: block;
+	}

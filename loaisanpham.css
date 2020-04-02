@@ -1,0 +1,265 @@
+*{
+			margin: 0px;
+			padding: 0px;
+		}
+		/*chỉnh toàn bộ trang*/
+		#khung{
+			width: 1200px;
+			margin: auto;
+			font-family: Arial;
+		}
+		#top{
+			margin: auto;
+			height: 140px;
+			width: 1200px;
+
+		}
+		#menu{
+			clear: both;
+			height: 40px;
+			margin-top: 5px;
+		}
+		#banner{
+			height: 400px;
+			background: url(hinhanh/2.jpg);
+			margin-top: 5px;
+			margin-bottom: 25px;
+			clear: both;
+			animation: banner 20s infinite;
+		}
+		@keyframes banner{
+			25%{
+				background: url(hinhanh/2.jpg);
+			}
+			50%{
+				background: url(hinhanh/7.jpg);
+			}
+			75%{
+				background: url(hinhanh/8.jpg);
+			}
+			100%{
+				background: url(hinhanh/9.jpg);
+			}
+		}
+		#menudoc{
+
+			width: 200px;
+			min-height:400px;
+			float: left;
+		}
+		#dau{
+			border: 1px solid black;
+			height: 50px;
+			line-height: 50px;
+			font-weight: bold;
+			width: 200px;
+			float: left;
+			background-color: #ab4205b0;
+			text-align: center;
+			color: white;
+		}
+		#doc{width: 200px;
+			border: 1px solid black;
+			min-height:412px;
+			float: left;
+		}
+		#doc ul {
+			background: url(hinhanh/giay.jpg); 
+			width: 198px;
+			padding: 0;
+			list-style-type: none;
+			text-align: left;
+		}
+		#doc li {
+			height: 41px;
+			line-height: 41px;
+			border-bottom: 1px solid #88757533;
+			padding: 0 1em;
+		}
+		#doc li a {
+			text-decoration: none;
+			color: #333;font-weight: bold;
+			display: block;
+		}
+		#doc li:hover {
+			background: #CDE2CD;
+		}
+		#sp{
+			width: 990px;
+			min-height: 400px;
+			float: left;
+			margin-left: 5px;
+		}
+		#loc{
+			height: 50px;
+			/*background-color: red;*/
+			margin-top: 5px;
+		}
+		#sapxep{
+			border-radius: 20px; 
+			padding: 7px;
+			margin-left: 30px;
+			margin-top: 10px;
+			width: 250px;
+		}
+		.sp1{
+			width: 990px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			border-bottom: 3px solid #ab4205ba;
+		}
+		.sp1 p{
+			padding-left:5px; 
+			background: #ab4205b0;
+			display: inline-block;
+			text-transform: uppercase;
+			font-family: fonta;
+			padding: 0 10px 0 10px;
+			color: white;
+			font-size: 28px;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		#sp2{
+			margin-top: 15px;
+			width: 990px;
+			height: 280px;
+			float:left;
+			
+		}
+		
+		.sp2a{
+			height: 270px;
+			width: 241px;
+			margin-left: 5px;
+			margin-top: 5px;
+			margin-bottom: 5px;
+			text-align: center;
+			float: left;
+			z-index: 6;
+			overflow: hidden;
+			
+		}
+		.sp2a:hover{
+			/*transform: scale(1.1);*/
+			background-color: white;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			/*			border: 1px solid #3270d3;*/
+			box-shadow: 0px 5px 5px 0px #3270d3  ;
+			border: none;
+		}
+		
+		.sp2a img{
+			margin-left: 5px;
+			margin-top: 5px;
+			width: 225px;
+			height: 190px; 
+			transition: 2s;
+			z-index: 4;
+		}
+		/*.sp2a img:hover{
+			transform: scale(0.9);
+		}*/
+		.imge{
+			display: block;
+		}
+		.text-sp-bc {
+			position: absolute; 
+			bottom: 0; 
+			background: rgb(0, 0.5, 0);
+			background: rgba(0, 0, 0, 0.5);
+			color: white; 
+			width: 100%;
+			height: 100%;
+			transition: .8s ease;
+			opacity:0;
+			color: blue;
+			font-size: 20px;
+			padding-top: 140px;
+			text-align: center;
+			
+		}	
+		.text-sp-bc a{
+			color: white;
+			padding: 7px;
+			background-color: green;
+			text-decoration: none;
+			display: inline-block;
+		}
+		.chua:hover .text-sp-bc{
+
+			text-decoration: none;
+			color: white;
+			opacity: 2;
+
+		}
+		.chua :hover .text-sp-bc a{
+			background-color: #21a250;
+		}
+		.tensp{
+			height: 40px;
+			padding-top: 10px;
+			text-align: center;
+			
+		}
+		.giasp{
+
+			color: red;
+			height: 25px;
+			padding-top: 7px; 
+			text-align: center;
+			
+		}
+		
+		#pt{
+			height: 40px;
+			line-height: 40px;
+			
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			clear: both;
+		}
+		#pt a{
+			display: inline-block;
+			padding: 0px 16px;
+			color: black;
+			background-color: #dddddd;
+			
+		}
+		#pt a:hover{
+			color: #fff;
+			background-color: #21a250;
+			border-color: #21a250;
+		}
+		#tin{
+			height: 500px;
+			clear: both;
+			margin-top: 20px;
+		}
+		#footer{
+			margin-top: 10px;
+			min-height: 190px;
+			background-image: url(hinhanh/nengo.jpg);
+			text-align: center;
+			clear: both;
+			font-size: 20px;
+		}
+		#gotop {
+			display: none;
+			position: fixed;
+			bottom: 50px;
+			right: 15px;
+			z-index: 99;
+			font-size: 18px;
+			border: 3px solid gray ;
+			outline: none;
+			/*background-color: gray;*/
+			color: black;
+			cursor: pointer;
+			padding: 8px;
+			border-radius: 4px;
+		}

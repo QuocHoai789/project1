@@ -1,0 +1,74 @@
+#tintuc{
+		width: 790px;
+		height: 500px;
+		float: left;
+	}
+	#tintuc1{
+		width: 790px;
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 3px solid #ab4205ba;
+	}
+	#tintuc1 p{
+		background: #ab4205b0;
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: fonta;
+		padding: 0 10px 0 10px;
+	}	
+	#tt{
+		width: 440px;
+		height: 442px;
+		float: left;
+		margin-top: 5px;
+	}
+	#tt span{
+		margin-left: 60px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+	a{text-decoration: none;}
+	a:hover{color: red;}
+	#tt1{
+		width: 345px;
+		height: 442px;
+		float: left;
+		margin-left: 5px;
+		font-size: 20px;
+		font-weight: bold;	
+	}
+	#tt1 img{
+		width: 100px;
+		height: 97px;
+		float: left;
+		margin-right: 10px;
+	}
+	.tta{
+		margin-top: 5px;
+		height: 142px;
+	}
+	/*Bản đồ*/
+	#bando{
+		width: 380px;
+		margin-left: 30px;
+		height: 500px;
+		float: left;
+	}
+	#bando1{
+		width: 380px;
+		height: 50px;
+		line-height: 50px;
+		border-bottom: 3px solid #ab4205ba;
+	}
+	#bando img{
+		width: 380px;
+		height: 442px;
+		margin-top: 5px;
+	}
+	#bando1 p{
+		background: #ab4205b0;
+		display: inline-block;
+		text-transform: uppercase;
+		font-family: fonta;
+		padding: 0 10px 0 10px;
+	}

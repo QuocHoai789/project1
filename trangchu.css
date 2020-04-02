@@ -1,0 +1,87 @@
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+/*chỉnh toàn bộ trang*/
+	#khung{
+		width: 1200px;
+		margin: auto;
+		font-family: Arial;
+	}
+	/*phần header*/
+	#top{
+		height: 150px;
+		background-color: #8a390a;
+	}
+	
+	/*menu*/
+	#menu{
+		clear: both;
+		height: 50px;
+		margin-top: 5px;
+	}
+	#menu1{
+		height: 50px;
+		width: 950px;
+		background-color: gray;
+		float: left
+	}
+	#menu1 ul
+	{ list-style-type: none;
+		text-align: center;
+	}
+	
+	/*chạy slide*/
+	#baner{
+		height: 400px;
+		background: url(hinhanh/2.jpg);
+		margin-top: 5px;
+		margin-bottom: 25px;
+		clear: both;
+		animation: baner 20s infinite;
+	}
+	@keyframes baner{
+		25%{
+			background: url(hinhanh/2.jpg);
+		}
+		50%{
+			background: url(hinhanh/7.jpg);
+		}
+		75%{
+			background: url(hinhanh/8.jpg);
+		}
+		100%{
+			background: url(hinhanh/9.jpg);
+		}
+	}
+	/*giới thiệu công ty*/
+	#giua{
+		min-height: 400px;
+		margin-top: 10px;
+	}
+	
+	/*sản phẩm*/
+    #sanpham{   
+        margin-top: 5px;
+        clear: both;
+        min-height: 660px;
+    }
+    
+    /*tin tức*/
+	#tin{
+		height: 500px;
+		clear: both;
+		margin-top: 20px;
+	}	
+	
+	/*footer*/
+	#footer{
+		min-height: 200px;
+		background-image: url(hinhanh/nengo.jpg);
+		text-align: center;
+		clear: both;
+		font-size: 20px;
+	}
+	
+	
+

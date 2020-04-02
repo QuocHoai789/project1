@@ -1,0 +1,32 @@
+#khung{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+a:hover{
+	text-decoration: underline;
+}
+#tren{
+	width: 1300px;
+	min-height: all;
+	background-color: #00bcd473;
+	border: 1px solid black;
+}
+#list{
+	width: 200px;
+	min-height: 1000px;
+	margin-right: 5px;
+	margin-top: 5px;
+	background-color: #79554899;
+	border: 1px solid black;
+	float: left;
+}
+#main{
+	width: 1092px;
+	min-height: 1000px;
+	margin-top: 5px;
+	border: 1px solid black;
+	float: left;
+}

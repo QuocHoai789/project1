@@ -1,0 +1,56 @@
+#dangnhap{
+			width: 400px;
+			height: 600px;
+			border: 1px solid;
+			background-color: black;
+			margin: auto;
+			margin-top: 50px;
+		}
+		.infor p{
+			margin: 10px;
+			padding-left: 20px;
+			font-weight: bold;
+			color: white;
+
+		}
+		.infor input{
+			margin-bottom: 10px;
+		}
+		.infor input[type=text],.infor input[type=password]{
+			width: 70%;
+			color: white;
+			height: 40px;
+			border-bottom: 1px solid #fff;margin-left: 50px;
+			outline: none;
+			background: transparent;
+
+		}
+		.infor input[type=submit]{
+			width: 70%;
+			font-weight: bold;
+			height: 40px;
+			margin-left: 50px;
+		}
+		.dong{
+			text-align: center;
+			height: 40px;
+			width: 40px;
+			color: white;
+			/*background-color: red;*/
+			float: right;
+			font-size: 30px;
+
+		}
+		.dong:hover,
+		.dong:focus {
+			color: red;
+			text-decoration: none;
+			cursor: pointer;
+		}
+		.img-user{
+			width: 140px;
+			height: 140px;
+			margin-left: 121px;
+			
+			
+		}
