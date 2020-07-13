@@ -1,0 +1,199 @@
+#menudoc{
+
+	width: 200px;
+	min-height:400px;
+	float: left;
+}
+#dau{
+	border: 1px solid black;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+	width: 200px;
+	float: left;
+	background-color: #ab4205b0;
+	text-align: center;
+	color: white;
+}
+#doc{width: 200px;
+	border: 1px solid black;
+	min-height:412px;
+	float: left;
+}
+#doc ul {
+	background: url(../hinhanh/giay.jpg); 
+	width: 198px;
+	padding: 0;
+	list-style-type: none;
+	text-align: left;
+}
+#doc li {
+	height: 41px;
+	line-height: 41px;
+	border-bottom: 1px solid #88757533;
+	padding: 0 1em;
+}
+#doc li a {
+	text-decoration: none;
+	color: #333;font-weight: bold;
+	display: block;
+}
+#doc li:hover {
+	background: #CDE2CD;
+}
+
+#sp{
+	width: 990px;
+	min-height: 400px;
+	float: left;
+	margin-left: 5px;
+}
+#loc{
+	height: 50px;
+	/*background-color: red;*/
+	margin-top: 5px;
+}
+#sapxep{
+	border-radius: 20px; 
+	padding: 7px;
+	margin-left: 30px;
+	margin-top: 10px;
+	width: 250px;
+}
+#lsp{
+	border-radius: 20px; 
+	padding: 7px;
+	margin-left: 30px;
+	margin-top: 10px;
+	width: 250px;
+}
+.sp1{
+	width: 990px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-bottom: 3px solid #ab4205ba;
+}
+.sp1 p{
+	padding-left:5px; 
+	background: #ab4205b0;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: fonta;
+	padding: 0 10px 0 10px;
+	color: white;
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+#sp2{
+	margin-top: 15px;
+	width: 990px;
+	height: 280px;
+	float:left;
+
+}
+
+.sp2a{
+	height: 270px;
+	width: 241px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.sp2a img{
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 225px;
+	height: 190px; 
+}
+.imge{
+	display: block;
+}
+.text-sp-bc {
+	position: absolute; 
+	bottom: 0; 
+	background: rgb(0, 0.5, 0);
+	background: rgba(0, 0, 0, 0.5);
+	color: white; 
+	width: 100%;
+	height: 100%;
+	transition: .8s ease;
+	opacity:0;
+	color: blue;
+	font-size: 20px;
+	padding-top: 140px;
+	text-align: center;
+
+}	
+.text-sp-bc a{
+	color: white;
+	padding: 7px;
+	background-color: green;
+	text-decoration: none;
+	display: inline-block;
+}
+.chua:hover .text-sp-bc{
+
+	text-decoration: none;
+	color: white;
+	opacity: 2;
+
+}
+.chua :hover .text-sp-bc a{
+	background-color: #21a250;
+}
+.tensp{
+	height: 40px;
+	padding-top: 10px;
+	text-align: center;
+
+}
+.giasp{
+
+	color: red;
+	height: 25px;
+	padding-top: 7px; 
+	text-align: center;
+
+}
+
+#pt{
+	height: 40px;
+	line-height: 40px;
+
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	clear: both;
+}
+#pt a{
+	display: inline-block;
+	padding: 0px 16px;
+	color: black;
+	background-color: #dddddd;
+
+}
+#pt a:hover{
+	color: #fff;
+	background-color: #21a250;
+	border-color: #21a250;
+}
+/*quảng cáo*/
+#ads{
+	width: 240px;
+	min-height: 400px;
+	margin-left: 5px;
+	float: left;
+}
+#ads img{
+	width: 240px;
+	min-height: 430px;
+	margin-top: 20px;
+}
+#loc label{
+	padding-left: 30px;
+	text-align: center;
+}
