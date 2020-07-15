@@ -63,7 +63,7 @@
 		       
  		</div>
  	</div>
- 	<div id="tin"><?php include('detail-page/tin.php'); ?></div>
+ 	<div id="tin" ><?php include('detail-page/tin.php'); ?></div>
  	<div id="footer"><?php include('detail-page/footer.php'); ?></div>
 </div>
 </body>

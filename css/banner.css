@@ -1,7 +1,7 @@
 #baner{
 		height: 400px;
 		background: url(../hinhanh/2.jpg);
-		margin-top: 5px;
+		/*margin-top: 5px;*/
 		margin-bottom: 25px;
 		clear: both;
 		animation: baner 20s infinite;

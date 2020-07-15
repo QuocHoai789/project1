@@ -20,7 +20,7 @@
   <?php
   include("csdl.php");
   ?>
-  <div id="tintuc">
+  <div id="tintuc" >
     <div id="tintuc1">
       <p style="color: white;font-size: 28px;font-weight: bold;margin-bottom: 5px">Tin tức</p>
     </div>
@@ -46,17 +46,10 @@
         <a href="ttchitiet.php?MaTin=<?php echo $d['MaTin']; ?>"><?php echo $d['TieuDe']; ?></a>
       </div>
     <?php } ?>
-     <!--  <div class="tta">
-        <a href="Tintuc/ttchitiet.html"><img src="hinhanh/tt2.png"></a>
-        <a href="Tintuc/ttchitiet.html">Chọn màu gỗ hợp với phong thủy</a>
-      </div>
-      <div class="tta">
-        <a href="Tintuc/ttchitiet.html"><img src="hinhanh/tt3.png"></a>
-        <a href="Tintuc/ttchitiet.html">Tinh hoa nghệ thuật gỗ cổ truyền</a>
-      </div> -->
+     
     </div> 
   </div>
-  <div id="bando">
+  <div id="bando" >
     <div id="bando1"><p style="color: white;font-size: 28px;font-weight: bold;margin-bottom: 5px">Bản đồ</p></div>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.1251394805467!2d106.64671631428716!3d10.801726461681113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529489244b839%3A0xdc1deee568f5158f!2zTuG7mWkgdGjhuqV0IE3hu5ljIFRow6BuaA!5e0!3m2!1svi!2s!4v1557762046942!5m2!1svi!2s" width="600" height="450" frameborder="0" style="border:0;width: 380px" allowfullscreen></iframe>
   </div>

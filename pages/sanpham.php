@@ -26,7 +26,7 @@
     
 
     function click1() {
-        // body...
+        
         alert("Không tìm thấy trang.");
       }
     </script>
@@ -38,7 +38,7 @@
 	<div id="top"><?php include("detail-page/dautrang.php"); ?></div>
 	<div id="menu"><?php include("detail-page/menu.php"); ?></div>
 	<div id="baner"></div>
-	<div ><?php include("sanpham1.php"); ?></div>
+	<div ><?php include("detail-page/sanpham1.php"); ?></div>
 	<div id="tin"><?php include("detail-page/tin.php"); ?></div>
 	<div id="footer"><?php include("detail-page/footer.php"); ?></div>
 </div>

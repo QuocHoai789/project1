@@ -35,10 +35,10 @@
 		<div class="infor">
 			<form name="login" action="detail-page/xulydangnhap.php" method="post"  >
 				<p>Tên người dùng:</p>
-				<input  type="text" name="tendangnhap" placeholder="Nhập vào tên của bạn" required="required" value="<?php if(isset($username)) 
-				echo $username ?>">
+				<input  type="text" name="fullname" placeholder="Nhập vào tên của bạn" required="required" value="<?php if(isset($fullname)) 
+				echo $fullname ?>">
 				<p>Mật khẩu:</p>
-				<input type="password" name="matkhau" placeholder="Nhập vào mật khẩu của bạn" required="required" value="<?php if(isset($matkhau)) echo $matkhau ?>">
+				<input type="password" name="password" placeholder="Nhập vào mật khẩu của bạn" required="required" value="<?php if(isset($password)) echo $password ?>">
 				<input type="submit" name="dangnhap" value="Đăng nhập"><br/>
 
 			</form>

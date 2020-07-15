@@ -6,44 +6,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<style type="text/css">
-		#dangky{
-			width: 450px;
-			height: 630px;
-			border: 1px solid;
-			background-color: black;
-			margin: auto;
-			margin-top: 10px;
-
-		}
-		#dangky h1{
-			text-align: center;
-			color: white;
-		}
-		#dangky p{
-			color: white;
-			text-align: center;
-		}
-		
-		#dangky input[type=text],#dangky input[type=password] {
-			width: 80%;
-			margin-bottom: 10px;
-			color: white;
-			height: 40px;
-			border-bottom: 1px solid #fff;
-			margin-left: 50px;
-			outline: none;
-			background: transparent;
-
-		}
-		#dangky input[type=submit]{
-			width: 80%;
-			;
-			height: 40px;
-			margin-left:50px;
-			margin-top: 20px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../css/dangky.css">
 	<title>Đăng ký</title>
 </head>
 <body>
@@ -57,15 +20,16 @@
 		<?php
 		if(isset($_POST['guidk'])){
 
-			$ten=$_POST['hoten'];
-			$mail=$_POST['maildk'];
-			$username=$_POST['tentk'];
-			$password=$_POST['matkhaudk'];
-			$rpassword=$_POST['matkhauxn'];
+			$fullname=$_POST['fullname'];
+			$email=$_POST['email'];
+			$address=$_POST['address'];
+			$phone_number=$_POST['phone_number'];
+			$password=$_POST['password'];
+			$rpassword=$_POST['rpassword'];
 			date_default_timezone_set("Asia/Bangkok");
-			$d = date('Y-m-d H:i:s');
+			$created = date('Y-m-d H:i:s');
 
-			if(strlen($username)<6||strlen($password)<6){
+			if(strlen($fullname)<6||strlen($password)<6){
 				echo"<p style='color:red;text-align:center'> Tên người dùng và mật khẩu không được nhỏ hơn 6 ký tự</p>";
 			}
 			else{
@@ -73,21 +37,23 @@
 					echo"<p style='color:red;text-align:center'> Xác nhận lại mật khẩu</p>";
 
 				}else{
-					$sql="select * from user where Username='$username'";
+					$sql="select * from user where fullname = '$fullname' ";
 					$kq=mysqli_query($link,$sql);
 					$sl=mysqli_num_rows($kq);
 					if($sl==0){
 						$kq2="insert into user(
-						HoTen,
-						Email,
-						Username,
-						Password,
-						NgayTao,
-						role
+						fullname,
+						email,
+						password,
+						phone_number,
+						address,
+						role,
+						created_at
 						) values 
-						( '$ten','$mail', '$username', md5($password) , ' $d','1')";
-						mysqli_query($link,$kq2);
-						header('location:action.php');
+						( '$fullname','$email', '".md5($password)."' , '$phone_number' , '$address', '1', '$created' )";
+						 mysqli_query($link,$kq2);
+						
+						header('Location: http://localhost:8080/do_an_web1/pages/detail-page/action.php');
 					}
 					else{
 						echo"<p style='color:red;text-align:center'> Tài khoản đã tồn tại</p>";
@@ -102,15 +68,17 @@
 		<form  name="dangkyf" action="dangky.php" method="post" >
 
 			<p>Họ tên:</p>
-			<input  type="text" name="hoten" placeholder="Nhập vào tên của bạn" required="required" value="<?php if(isset($ten)) echo $ten ?>">
+			<input  type="text" name="fullname" placeholder="Nhập vào tên của bạn" required="required" value="<?php if(isset($fullname)) echo $fullname ?>">
 			<p>Email:</p>
-			<input type="Email" name="maildk" placeholder="Nhập vào địa chỉ mail của bạn" required="required" value="<?php if(isset($mail)) echo $mail ?>">
-			<p>Tên người dùng:</p>
-			<input type="text" name="tentk" placeholder="Nhập vào tên của bạn" required="required" value="<?php if(isset($username)) echo $username ?>">
+			<input type="email" name="email" placeholder="Nhập vào địa chỉ mail của bạn" required="required" value="<?php if(isset($email)) echo $email ?>">
 			<p>Mật khẩu:</p>
-			<input type="password" name="matkhaudk" placeholder="Nhập mật khẩu của bạn" required="required"value="<?php if(isset($password)) echo $password ?>">
+			<input type="password" name="password" placeholder="Nhập mật khẩu của bạn" required="required"value="<?php if(isset($password)) echo $password ?>">
 			<p>Xác nhận mật khẩu:</p>
-			<input type="password" name="matkhauxn" placeholder="Xác nhận lại mật khẩu" required="required" value="<?php if(isset($rpassword)) echo $rpassword ?>">
+			<input type="password" name="rpassword" placeholder="Xác nhận lại mật khẩu" required="required" value="<?php if(isset($rpassword)) echo $rpassword ?>">
+			<p>Số điện thoại:</p>
+			<input type="text" name="phone_number" placeholder="Nhập vào số điện thoại của bạn" required="required" value="<?php if(isset($phone_number)) echo $phone_number ?>">
+			<p>Địa chỉ:</p>
+			<input type="text" name="address" placeholder="Nhập vào địa chỉ của bạn" required="required" value="<?php if(isset($address)) echo $address ?>">
 			<input type="submit" name="guidk" value="Tạo tài khoản" id="submit" ><br/>
 		</form>
 		<br/>

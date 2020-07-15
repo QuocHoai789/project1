@@ -4,29 +4,29 @@ include('csdl.php');
 
 //Làm giỏ hàng
 if(!isset($_SESSION['dathang'])){
-		$_SESSION['dathang']=array();
+		$_SESSION['dathang'] = array();
 	}
-	if(isset($_GET['MaSp'])&& isset($_GET['soluong'])){
-		$MaSp=$_GET['MaSp'];
-		$soluong=$_GET['soluong'];
-		$kt=0;
-		for ($i=0; $i <count($_SESSION['dathang']) ; $i++) { 
-			if($MaSp==$_SESSION['dathang'][$i]['Mã sản phẩm']){
-				$_SESSION['dathang'][$i]['Số lượng']+=$soluong;
+	if(isset($_GET['MaSp']) && isset($_GET['soluong'])){
+		$MaSp = $_GET['MaSp'];
+		$soluong = $_GET['soluong'];
+		$kt = 0;
+		for ($i = 0; $i < count($_SESSION['dathang']) ; $i ++) { 
+			if($MaSp == $_SESSION['dathang'][$i]['Mã sản phẩm']){
+				$_SESSION['dathang'][$i]['Số lượng'] += $soluong;
 
-				$kt=1; break;
+				$kt = 1; break;
 			}
 		}
 
-		if($kt==0){
-			$k=count($_SESSION['dathang']);
-			$sql="select * from sanpham where MaSp = ".$MaSp;
-			$kq=mysqli_query($link,$sql);
-			$d=mysqli_fetch_array($kq);
-			$_SESSION['dathang'][$k]['Mã sản phẩm']=$d['MaSp'];
-			$_SESSION['dathang'][$k]['Tên sản phẩm']=$d['TenSp'];
-			$_SESSION['dathang'][$k]['Giá tiền']=$d['GiaTien'];
-			$_SESSION['dathang'][$k]['Số lượng']=$soluong;
+		if($kt == 0){
+			$k = count($_SESSION['dathang']);
+			$sql = "select * from sanpham where MaSp = ".$MaSp;
+			$kq = mysqli_query($link,$sql);
+			$d = mysqli_fetch_array($kq);
+			$_SESSION['dathang'][$k]['Mã sản phẩm'] = $d['MaSp'];
+			$_SESSION['dathang'][$k]['Tên sản phẩm']= $d['TenSp'];
+			$_SESSION['dathang'][$k]['Giá tiền'] = $d['GiaTien'];
+			$_SESSION['dathang'][$k]['Số lượng'] = $soluong;
 
 		}
 		echo'<script type="text/javascript">
@@ -45,13 +45,13 @@ if(isset($_GET['huydat']))
 
 //Xóa 1 sản phẩm trong giỏ hàng
 if(isset($_GET['xoa'])){
-	$xoa=$_GET['xoa'];
-	for ($i=$xoa; $i <count($_SESSION['dathang']) ; $i++) { 
-		$_SESSION['dathang'][$i]=$_SESSION['dathang'][$i+1];
+	$xoa = $_GET['xoa'];
+	for ($i = $xoa; $i <count($_SESSION['dathang']) ; $i++) { 
+		$_SESSION['dathang'][$i] = $_SESSION['dathang'][$i+1];
 
 
 	}
-	unset($_SESSION['dathang'][count($_SESSION['dathang'])-1]);
+	unset($_SESSION['dathang'][count($_SESSION['dathang']) - 1]);
 	header('Location: http://localhost:8080/do_an_web1/pages/themgiohang.php');
 }
 
@@ -59,10 +59,10 @@ if(isset($_GET['xoa'])){
 
 
 if(isset($_GET['capnhat'])){
-	
-	for ($i=0; $i <count($_SESSION['dathang']) ; $i++) { 
+	var_dump($_SESSION['dathang']);
+	for ($i= 0; $i < count($_SESSION['dathang']) ; $i ++) { 
 		
-		      $_SESSION['dathang'][$i]['Số lượng']=$_GET['sl'.$i];	
+		      $_SESSION['dathang'][$i]['Số lượng'] = $_GET['sl'.$i];	
 		      
 		   
 		}
@@ -80,7 +80,7 @@ if(isset($_GET['a'])){
 }
 
 //Kiểm tra có đăng nhập trước khi mua hàng chưa
-if(isset($_GET['guidathang'] )&& isset($_SESSION['username'])){
+if(isset($_GET['guidathang'] ) && isset($_SESSION['username'])){
 
 	header('location: http://localhost:8080/do_an_web1/pages/hoadon.php');
 }
@@ -96,51 +96,77 @@ else if(isset($_GET['guidathang']) && !isset($_SESSION['username'])){ ?>
 
 //Gửi thông tin mua hàng sau khi đã dăng nhập
 if(isset($_GET['guihoadon'])){
-	$tennguoinhan=$_GET['tennguoinhan'];
-	$diachigiao=$_GET['diachigiao'];
-	$dienthoai=$_GET['dienthoai'];
-	$username=$_SESSION['username'];
-	$noidung=$_GET['noidung'];
-	$tongtien=$_SESSION['tongtien'];
+	$tennguoinhan = $_GET['tennguoinhan'];
+	$diachigiao = $_GET['diachigiao'];
+	$dienthoai = $_GET['dienthoai'];
+	$username = $_SESSION['username'];
+	$noidung = $_GET['noidung'];
+	$tongtien = $_SESSION['tongtien'];
 	date_default_timezone_set("Asia/Bangkok");
 	$a = date('Y-m-d H:i:s');
 	$sql="select * from user where Username='$username'";
-	$kq=mysqli_query($link,$sql);
-	$d=mysqli_fetch_array($kq);
-	$ID=$d['ID'];
-	$sql2="insert into hoadon(ID,NgayLap,TenNguoiNhan,SDT,DiaChiGiao,NoiDung,tongtien) values('$ID','$a','$tennguoinhan','$dienthoai','$diachigiao','$noidung','$tongtien')";
-	$kq2=mysqli_query($link,$sql2);
+	$kq = mysqli_query($link,$sql);
+	$d = mysqli_fetch_array($kq);
+	$ID = $d['ID'];
+	$sql2 = "insert into hoadon(ID,NgayLap,TenNguoiNhan,SDT,DiaChiGiao,NoiDung,tongtien) values('$ID','$a','$tennguoinhan','$dienthoai','$diachigiao','$noidung','$tongtien')";
+	$kq2 = mysqli_query($link,$sql2);
 	
-	 $hd=mysqli_insert_id($link);
-	for($i=0;$i<count($_SESSION['dathang']);$i++){
+	 $hd= mysqli_insert_id($link);
+	for($i = 0;$i<count($_SESSION['dathang']);$i++){
 		 // $resurt=mysqli_query($link,"select MaHD from lkhoadon ");
 		 // $resurt2=mysqli_fetch_array($resurt);
 		 // $hd=$resurt2['MaHD'];
 
 		$MaSp  = $_SESSION['dathang'][$i]['Mã sản phẩm'];
-		$gia=$_SESSION['dathang'][$i]['Giá tiền'];
-		$soluong=$_SESSION['dathang'][$i]['Số lượng'];
-		$GiaTien=$gia*$soluong;
+		$gia = $_SESSION['dathang'][$i]['Giá tiền'];
+		$soluong = $_SESSION['dathang'][$i]['Số lượng'];
+		$GiaTien = $gia*$soluong;
 		
-		$sql3="insert into chitiethd(MaHD,MaSp,SoLuong,GiaTien) values('$hd','$MaSp','$soluong','$GiaTien')";
+		$sql3 = "insert into chitiethd(MaHD,MaSp,SoLuong,GiaTien) values('$hd','$MaSp','$soluong','$GiaTien')";
 		
-		$kq3=mysqli_query($link,$sql3);
+		$kq3 = mysqli_query($link,$sql3);
 	}
 	unset($_SESSION['dathang']);
-	header('Location:trangchu.php');
+	header('Location: http://localhost:8080/do_an_web1/pages/trangchu.php');
 	
+}
+
+//Sửa thông tin cá nhân
+if(isset($_POST['edit-profile']))
+{
+	$user = $_SESSION['username'];
+	
+	if(!empty($_POST['repas'])){
+		$pass = $_POST['repas'];
+	}
+	if($pass)
+	{
+		$qr = "update user set password = '".md5($pass)."' where fullname = '$user' ";
+		$run = mysqli_query($link, $qr);
+	}
+	if($run){
+		unset($_SESSION['username']);
+		header('Location: http://localhost:8080/do_an_web1/pages/dangnhap.php');
+	}
+	else{
+		header('Location: http://localhost:8080/do_an_web1/pages/ttcanhan.php');
+	}
+
 }
 //Liên hệ
 if(isset($_POST['guilienhe'])){
-	$hovaten=$_POST['hovaten'];
-	$email=$_POST['email'];
-	$sodienthoai=$_POST['sodienthoai'];
-	$ndlienhe=$_POST['ndlienhe'];
-	$sql="insert into lienhe (HTen,Email,SDT,NoiDung) values('$hovaten','$email',$sodienthoai,'$ndlienhe')";
-	mysqli_query($link,$sql); ?>
+	$hovaten = $_POST['hovaten'];
+	$email = $_POST['email'];
+	$sodienthoai = $_POST['sodienthoai'];
+	$ndlienhe = $_POST['ndlienhe'];
+	$sql = "insert into lienhe (HTen,Email,SDT,NoiDung) values('$hovaten','$email',$sodienthoai,'$ndlienhe')";
+	mysqli_query($link,$sql); 
+	?>
 	<script type="text/javascript">
-		alert("Đã gủi phản hồi");
-		window.location="trangchu.php";
+		alert("Đã gửi phản hồi");
+		window.location = "../trangchu.php";
 	</script>
-<?php } ?>
+<?php
+ 	} 
+ ?>
 

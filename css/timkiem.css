@@ -21,7 +21,7 @@
 }
 #banner{
 	height: 400px;
-	background: url(hinhanh/2.jpg);
+	background: url(../hinhanh/2.jpg);
 	margin-top: 5px;
 	margin-bottom: 25px;
 	clear: both;
@@ -29,16 +29,16 @@
 }
 @keyframes banner{
 	25%{
-		background: url(hinhanh/2.jpg);
+		background: url(../hinhanh/2.jpg);
 	}
 	50%{
-		background: url(hinhanh/7.jpg);
+		background: url(../hinhanh/7.jpg);
 	}
 	75%{
-		background: url(hinhanh/8.jpg);
+		background: url(../hinhanh/8.jpg);
 	}
 	100%{
-		background: url(hinhanh/9.jpg);
+		background: url(../hinhanh/9.jpg);
 	}
 }
 #giua{

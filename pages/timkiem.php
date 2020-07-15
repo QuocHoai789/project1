@@ -100,7 +100,7 @@
 						while($d=mysqli_fetch_array($kq4)) { 
 							?>
 
-							<div class="sp2a"><img  src="<?php echo $d['HinhAnh']; ?>">
+							<div class="sp2a"><img  src="../<?php echo $d['HinhAnh']; ?>">
 								<p class="tensp"><a href="http://localhost:8080/do_an_web1/pages/chitietsanpham.php?MaSp=<?php echo $d['MaSp'] ?>"><?php echo $d['TenSp']; ?></a></p>
 								<p class="giasp">Giá:<?php echo number_format($d['GiaTien'],0,'.','.')." đ"; ?></p>
 							</div>

@@ -64,6 +64,7 @@ if(!isset($_SESSION['dathang'])){
                       <span class="caret"></span></button>
                       <ul  class="dropdown-menu">
                         <li><a href="ttdonhang.php">Xem hóa đơn</a></li>
+                        <li><a href="ttcanhan.php">Xem thông tin cá nhân</a></li>
                         <li><a href="detail-page/xuly1.php?a" onclick="return confirm('Bạn có muốn đăng xuất không?');">Đăng xuất</a></li>
                       </ul>
                     </div>

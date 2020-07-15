@@ -40,7 +40,7 @@ include("detail-page/csdl.php");
 	<h1 style="text-align: center">Thông tin mua hàng</h1>
 
 <div id="hoadon" align="center">	
-<form  name="hoadon" method="get" action="xuly1.php">
+<form  name="hoadon" method="get" action="detail-page/xuly1.php">
 	<p style="font-weight: bold;color: red">*Lưu ý:Tên khách hàng,số điện thoại địa chỉ giao hàng không được để trống* </p>
 	<p><label for='ten' >Tên khách hàng:</label>
 	<input type="text" name="tennguoinhan"  id="ten" required="required" value="<?php echo $d['HoTen']; ?>" ></p>
